@@ -11,8 +11,15 @@ const names = [
 const byAlphabeticalOrder = (wordA, wordB) => 
   ('' + wordA).localeCompare(wordB)
 
-const print = name => console.log(chalk.default.blue(name))
-
+var num = 0;
+const print = (name,index) => {
+    if (index%2 == 0) {
+        console.log(chalk.default.blue(name));
+    } else {
+        console.log(chalk.default.yellow(name));
+    }
+    num++;
+}
 names 
     .sort(byAlphabeticalOrder)
     .map(string.underscore)
