@@ -8,10 +8,13 @@ const names = [
     'Iury da Rocha Miguel'
 ]
 
+const byAlphabeticalOrder = (wordA, wordB) => 
+  ('' + wordA).localeCompare(wordB)
+
 const print = name => console.log(chalk.default.blue(name))
 
 names 
-    .sort()
+    .sort(byAlphabeticalOrder)
     .map(string.underscore)
     .forEach(print);
 
